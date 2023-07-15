@@ -1,0 +1,100 @@
+package com.masai;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class HashingDemo {
+
+	public static Map<Character, List<String>> addName(String names[]) {
+		Map<Character, List<String>> map = new HashMap<>();
+
+		for (String name : names) {
+			char firstLetter = name.charAt(0);
+			if (!map.containsKey(firstLetter)) {
+				map.put(firstLetter, new ArrayList<>());
+			}
+			map.get(firstLetter).add(name);
+		}
+
+		return map;
+	}
+
+	public static void display(Map<Character, List<String>> map) {
+		for (char c = 'A'; c <= 'Z'; c++) {
+			if (map.containsKey(c)) {
+				System.out.println(c + ": " + String.join(", ", map.get(c)));
+			} else {
+				System.out.println(c + ":");
+			}
+		}
+	}
+
+	public static boolean searchName(Map<Character, List<String>> map, String name) {
+		char firstLetter = name.charAt(0);
+		if (map.containsKey(firstLetter)) {
+			List<String> namesStartingWithLetter = map.get(firstLetter);
+			return namesStartingWithLetter.contains(name);
+		}
+		return false;
+	}
+
+	public static boolean removeName(Map<Character, List<String>> map, String name) {
+		char firstLetter = name.charAt(0);
+		if (map.containsKey(firstLetter)) {
+			List<String> namesStartingWithLetter = map.get(firstLetter);
+			boolean removed = namesStartingWithLetter.remove(name);
+			if (namesStartingWithLetter.isEmpty()) {
+				map.remove(firstLetter);
+			}
+			return removed;
+		}
+		return false;
+	}
+
+	public static void main(String[] args) {
+		String names[] = { "Naya", "Ishaan", "Jai", "Inaya", "Amar", "Navi", "Dhruv", "Kanan", "Diya", "Shyla",
+				"Agastya", "Ananya", "Nila", "Tenzin", "Tamia", "Shaan", "Ajay", "Jaya", "Anjali", "Aditi", "Reva",
+				"Sahil", "Darsh", "Aja", "Ambar", "Deven", "Ishani", "Kavi", "Marjane", "Jasleen", "Ashwin", "Aadhira",
+				"Candy", "Kum", "Salina", "Artha", "Raghav", "Avan", "Sitara", "Shylah", "Divya", "Varun", "Sona",
+				"Shaila", "Kimaya", "Farid", "Kashvi", "Devi", "Charu", "Mihir", "Tulsi", "Anila", "Anala", "Vivan",
+				"Amitabh", "Mahika", "Sudhir", "Lata", "Anand", "Akshay" };
+
+		Map<Character, List<String>> map = addName(names);
+
+		System.out.println("The original map is ");
+		display(map);
+
+		System.out.println();
+		if (searchName(map, "Farid")) {
+			System.out.println("Name 'Farid' found in Map");
+		} else {
+			System.out.println("Name 'Farid' not found in Map");
+		}
+
+		System.out.println();
+		if (searchName(map, "Harish")) {
+			System.out.println("Name 'Harish' found in Map");
+		} else {
+			System.out.println("Name 'Harish' not found in Map");
+		}
+
+		System.out.println();
+		if (removeName(map, "Lata")) {
+			System.out.println("Name 'lata' removed from Map");
+		} else {
+			System.out.println("Name 'lata' not in map hence not deleted");
+		}
+
+		System.out.println();
+		if (removeName(map, "Harish")) {
+			System.out.println("Name 'Harish' removed from Map");
+		} else {
+			System.out.println("Name 'Harish' not in map hence not deleted");
+		}
+
+		System.out.println();
+		display(map);
+	}
+}

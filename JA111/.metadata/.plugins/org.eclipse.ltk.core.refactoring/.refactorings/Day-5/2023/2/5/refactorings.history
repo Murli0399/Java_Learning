@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.masai.xyz.java&apos; to &apos;NameVowelConsonant.java&apos;&#x0D;&#x0A;- Original project: &apos;Day-5&apos;&#x0D;&#x0A;- Original element: &apos;com.masai.xyz.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.masai.NameVowelConsonant.java&apos;" description="Rename compilation unit &apos;xyz.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.masai{xyz.java" name="NameVowelConsonant.java" references="false" stamp="1675412314968" version="1.0"/>
+</session>

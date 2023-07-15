@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;sb101_b24_dao_join_login&apos;" deleteContents="false" description="Delete resource &apos;sb101_b24_dao_join_login&apos;" element1="/sb101_b24_dao_join_login" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1680070885136"/>
+</session>

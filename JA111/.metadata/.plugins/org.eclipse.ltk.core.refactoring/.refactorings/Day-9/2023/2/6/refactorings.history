@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;com.masai.ScienceMathsStudent.mathsMarks&apos; in &apos;com.masai.ScienceMathsStudent&apos;&#x0D;&#x0A;- Original project: &apos;Day-9&apos;&#x0D;&#x0A;- Original element: &apos;com.masai.ScienceMathsStudent.mathsMarks&apos;&#x0D;&#x0A;- Getter method name: &apos;getMathsMarks&apos;&#x0D;&#x0A;- Setter method name: &apos;setMathsMarks&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;mathsMarks&apos;" flags="589830" getter="getMathsMarks" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;com.masai{ScienceMathsStudent.java[ScienceMathsStudent^mathsMarks" insertion="1" setter="setMathsMarks" stamp="1675918596735" version="1.0" visibility="1"/>
+</session>
