@@ -1,0 +1,72 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="p1" class="com.masai.Person">
+		<property name="id" value="1" />
+		<property name="name" value="Murli" />
+		<property name="age" value="23" />
+		<property name="email" value="murli@gmail.com" />
+		<property name="mobile" value="9876543210" />
+	</bean>
+	<bean id="p2" class="com.masai.Person">
+		<property name="id" value="2" />
+		<property name="name" value="Rahul" />
+		<property name="age" value="25" />
+		<property name="email" value="rahul@gmail.com" />
+		<property name="mobile" value="1234567890" />
+	</bean>
+	<bean id="p3" class="com.masai.Person">
+		<property name="id" value="3" />
+		<property name="name" value="Shalu" />
+		<property name="age" value="23" />
+		<property name="email" value="shalu@gmail.com" />
+		<property name="mobile" value="9988776655" />
+	</bean>
+	<bean id="p4" class="com.masai.Person">
+		<property name="id" value="4" />
+		<property name="name" value="Heer" />
+		<property name="age" value="27" />
+		<property name="email" value="heer@gmail.com" />
+		<property name="mobile" value="1122334455" />
+	</bean>
+	<bean id="p5" class="com.masai.Person">
+		<property name="id" value="5" />
+		<property name="name" value="Mohit" />
+		<property name="age" value="25" />
+		<property name="email" value="mohit@gmail.com" />
+		<property name="mobile" value="1122334455" />
+	</bean>
+	<bean id="s1" class="com.masai.Skill">
+		<property name="id" value="1" />
+		<property name="name" value="Java" />
+		<property name="yearsOfExperience" value="5" />
+	</bean>
+	<bean id="s2" class="com.masai.Skill">
+		<property name="id" value="2" />
+		<property name="name" value="Mysql" />
+		<property name="yearsOfExperience" value="2" />
+	</bean>
+	<bean id="s3" class="com.masai.Skill">
+		<property name="id" value="3" />
+		<property name="name" value="C++" />
+		<property name="yearsOfExperience" value="3" />
+	</bean>
+	<bean id="ps" class="com.masai.PersonService">
+		<property name="skillMap">
+			<map>
+				<entry key-ref="p1" value-ref="s1" />
+				<entry key-ref="p2" value-ref="s2" />
+				<entry key-ref="p3" value-ref="s3" />
+			</map>
+		</property>
+		<property name="personList">
+			<list>
+				<ref bean="p1" />
+				<ref bean="p2" />
+				<ref bean="p3" />
+				<ref bean="p4" />
+				<ref bean="p5" />
+			</list>
+		</property>
+	</bean>
+</beans>
